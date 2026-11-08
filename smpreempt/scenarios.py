@@ -1,7 +1,7 @@
 """Shared hypothetical scenario for the BMC example and regression tests."""
 from copy import deepcopy
 
-from smpreempt.riscv_model import (
+from smpreempt.model.riscv_model import (
     State, P, Insn, Region, PMP_NAPOT, PMP_R, PMP_W, PMP_X, napot_encode,
 )
 

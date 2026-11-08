@@ -1,6 +1,6 @@
 import unittest
 from copy import deepcopy
-from smpreempt.riscv_model import (
+from smpreempt.model.riscv_model import (
     State, Insn, step, pmp_allow,
     PM, Machine, HostAction, ProtectionPolicy, AccessFault, IllegalInstruction,
 )

@@ -1,0 +1,6 @@
+[
+  {"opcode": "SD", "rs1": 10, "rs2": 11, "imm": 0,
+   "memory_role": "pte", "role_evidence": "caller identifies x10 as a PTE location",
+   "facets": ["PPN", "V/R/W/X/U/G/A/D", "PBMT only if Svpbmt is enabled"]},
+  {"opcode": "SFENCE.VMA", "rs1": 0, "rs2": 0}
+]

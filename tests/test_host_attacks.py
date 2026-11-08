@@ -1,14 +1,14 @@
 import importlib.util
 import unittest
 
-from smpreempt.riscv_model import AccessFault, Insn, Machine, PM, ProtectionPolicy, Region, State
+from smpreempt.model.riscv_model import AccessFault, Insn, Machine, PM, ProtectionPolicy, Region, State
 from smpreempt.scenarios import demo_machine
 
 HAS_Z3 = importlib.util.find_spec("z3") is not None
 if HAS_Z3:
     import z3
-    from smpreempt.host_attacks import HostMemory, analyze_host_attacks
-    from smpreempt.symbolic_pmp import SymbolicPMP
+    from smpreempt.analysis.host_attacks import HostMemory, analyze_host_attacks
+    from smpreempt.model.symbolic_pmp import SymbolicPMP
 
 
 class ByteAccessTests(unittest.TestCase):

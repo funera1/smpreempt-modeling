@@ -1,0 +1,6 @@
+[
+  {"opcode": "CSRRW", "csr": "pmpaddr0", "rd": 0, "rs1": 5},
+  {"opcode": "CSRRS", "csr": "pmpcfg0", "rd": 7, "rs1": 0},
+  {"opcode": "CSRRW", "csr": "pmpcfg0", "rd": 0, "rs1": 6},
+  {"opcode": "SFENCE.VMA", "rs1": 0, "rs2": 0}
+]

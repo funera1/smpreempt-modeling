@@ -2,3 +2,7 @@ __pycache__/
 *.py[cod]
 .venv/
 results/*.json
+results/keystone-ir/
+results/keystone-generic-ir/
+results/keystone-complete-ir/
+results/keystone-generic-elf-patched/

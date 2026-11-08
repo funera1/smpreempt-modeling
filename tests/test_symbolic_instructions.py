@@ -5,8 +5,8 @@ import unittest
 HAS_Z3 = importlib.util.find_spec("z3") is not None
 if HAS_Z3:
     import z3
-    from smpreempt.symbolic_instructions import InstructionState, instruction_transition, load64, store64
-    from smpreempt.riscv_model import Insn, Machine, Unsupported, MSTATUS_MPRV
+    from smpreempt.model.symbolic_instructions import InstructionState, instruction_transition, load64, store64
+    from smpreempt.model.riscv_model import Insn, Machine, Unsupported, MSTATUS_MPRV
     from smpreempt.scenarios import demo_machine
 
 

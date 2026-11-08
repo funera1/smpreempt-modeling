@@ -4,13 +4,13 @@ import unittest
 HAS_Z3 = importlib.util.find_spec("z3") is not None
 if HAS_Z3:
     import z3
-    from smpreempt.riscv_model import (
+    from smpreempt.model.riscv_model import (
         Insn, Machine, PM, Unsupported, pmp_allow,
         step, _pmp_installable, PMP_ADDR_BITS,
     )
     from smpreempt.scenarios import demo_machine
-    from smpreempt.symbolic_pmp import SymbolicPMP
-    from smpreempt.symbolic_system import (
+    from smpreempt.model.symbolic_pmp import SymbolicPMP
+    from smpreempt.analysis.symbolic_system import (
         BoundedSystem, find_counterexample, STEP, PREEMPT, HOST_SD, RESUME,
         ACCESS_FAULT, MISALIGNED, PM_REJECTED, EXIT,
     )

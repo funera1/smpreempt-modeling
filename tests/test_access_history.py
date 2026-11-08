@@ -1,6 +1,6 @@
 import unittest
 
-from smpreempt.riscv_model import AccessFault, HostAction, Insn, IsolationRejected, Machine, PM
+from smpreempt.model.riscv_model import AccessFault, HostAction, Insn, IsolationRejected, Machine, PM
 from smpreempt.scenarios import demo_machine
 
 

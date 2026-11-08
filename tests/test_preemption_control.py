@@ -1,15 +1,15 @@
 import importlib.util
 import unittest
 
-from smpreempt.preemption import PreemptionControl
-from smpreempt.riscv_model import Insn, Machine, PM
+from smpreempt.analysis.preemption import PreemptionControl
+from smpreempt.model.riscv_model import Insn, Machine, PM
 from smpreempt.scenarios import demo_machine
 
 HAS_Z3 = importlib.util.find_spec("z3") is not None
 if HAS_Z3:
     import z3
-    from smpreempt.preemption import check_switch
-    from smpreempt.symbolic_system import BoundedSystem, STEP, PREEMPT, RESUME, RUN, find_counterexample
+    from smpreempt.analysis.preemption import check_switch
+    from smpreempt.analysis.symbolic_system import BoundedSystem, STEP, PREEMPT, RESUME, RUN, find_counterexample
 
 
 def temporarily_exposed():
@@ -100,8 +100,8 @@ class SymbolicControlTests(unittest.TestCase):
 
     def test_concrete_and_symbolic_control_agree(self):
         machine, template = temporarily_exposed()
-        from smpreempt.symbolic_system import SystemState
-        from smpreempt.preemption import switchout_state
+        from smpreempt.analysis.symbolic_system import SystemState
+        from smpreempt.analysis.preemption import switchout_state
         for mode in ("always", "isolation"):
             for pm in (PM(None), PM(template)):
                 controller = PreemptionControl(mode)
